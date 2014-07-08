@@ -7,6 +7,8 @@
 //
 
 #import "EMJSlidersViewController.h"
+#import "ClassItem.h"
+#import "ClassItemStore.h"
 
 @interface EMJSlidersViewController ()
 
@@ -56,9 +58,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [[[ClassItemStore sharedStore] allClasses] count];
 }
 
 /*
