@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface ClassItem : NSObject <NSCoding>
+
+@property NSArray *checkedCategories;
 @property NSMutableDictionary *categories;
 @property NSString *className;
 @property int classGrade;

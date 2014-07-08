@@ -9,6 +9,7 @@
 #import "EMJSlidersViewController.h"
 #import "ClassItem.h"
 #import "ClassItemStore.h"
+#import "SliderTableCell.h"
 
 @interface EMJSlidersViewController ()
 
@@ -34,11 +35,10 @@
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    UINib *nib = [UINib nibWithNibName:@"SliderTableCell" bundle:nil];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerNib:nib
+         forCellReuseIdentifier:@"SliderTableCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,19 +58,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[ClassItemStore sharedStore] allClasses] count];
+    return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    SliderTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SliderTableCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.categoryLabel.text = @"Homework";
+    cell.gradeLabel.text = [NSString stringWithFormat:@"%d%%", 55];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
