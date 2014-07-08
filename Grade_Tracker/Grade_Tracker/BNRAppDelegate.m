@@ -7,6 +7,7 @@
 //
 
 #import "BNRAppDelegate.h"
+#import "ClassTableViewController.h"
 
 @implementation BNRAppDelegate
 

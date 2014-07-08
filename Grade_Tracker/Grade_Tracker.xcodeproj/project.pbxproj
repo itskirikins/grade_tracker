@@ -22,6 +22,8 @@
 		F97282CB196C507200D89420 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F97282CA196C507200D89420 /* Storyboard.storyboard */; };
 		F97282CE196C5B3700D89420 /* NewClassController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97282CD196C5B3700D89420 /* NewClassController.m */; };
 		F97282D1196C5E9200D89420 /* ClassItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F97282D0196C5E9200D89420 /* ClassItem.m */; };
+		F97282D4196C695E00D89420 /* ClassTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97282D3196C695E00D89420 /* ClassTableViewController.m */; };
+		F99085AE196C6B4A00A4CD05 /* ClassItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F99085AD196C6B4A00A4CD05 /* ClassItemStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		F97282CD196C5B3700D89420 /* NewClassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewClassController.m; sourceTree = "<group>"; };
 		F97282CF196C5E9200D89420 /* ClassItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassItem.h; sourceTree = "<group>"; };
 		F97282D0196C5E9200D89420 /* ClassItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassItem.m; sourceTree = "<group>"; };
+		F97282D2196C695E00D89420 /* ClassTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassTableViewController.h; sourceTree = "<group>"; };
+		F97282D3196C695E00D89420 /* ClassTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassTableViewController.m; sourceTree = "<group>"; };
+		F99085AC196C6B4A00A4CD05 /* ClassItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassItemStore.h; sourceTree = "<group>"; };
+		F99085AD196C6B4A00A4CD05 /* ClassItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassItemStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,10 @@
 				F97282CA196C507200D89420 /* Storyboard.storyboard */,
 				F97282CC196C5B3700D89420 /* NewClassController.h */,
 				F97282CD196C5B3700D89420 /* NewClassController.m */,
+				F97282D2196C695E00D89420 /* ClassTableViewController.h */,
+				F97282D3196C695E00D89420 /* ClassTableViewController.m */,
+				F99085AC196C6B4A00A4CD05 /* ClassItemStore.h */,
+				F99085AD196C6B4A00A4CD05 /* ClassItemStore.m */,
 				F97282CF196C5E9200D89420 /* ClassItem.h */,
 				F97282D0196C5E9200D89420 /* ClassItem.m */,
 				F97282A1196C506500D89420 /* Grade_Tracker */,
@@ -257,7 +267,9 @@
 				F97282CE196C5B3700D89420 /* NewClassController.m in Sources */,
 				F97282A8196C506500D89420 /* main.m in Sources */,
 				F97282AC196C506500D89420 /* BNRAppDelegate.m in Sources */,
+				F99085AE196C6B4A00A4CD05 /* ClassItemStore.m in Sources */,
 				F97282D1196C5E9200D89420 /* ClassItem.m in Sources */,
+				F97282D4196C695E00D89420 /* ClassTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +466,7 @@
 				F97282C6196C506500D89420 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F97282C7196C506500D89420 /* Build configuration list for PBXNativeTarget "Grade_TrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +475,7 @@
 				F97282C9196C506500D89420 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

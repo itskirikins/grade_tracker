@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *label;
 @end
 
 @implementation ViewController
@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
     NSMutableArray *dataArray = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 1; i++){
+    for (int i = 0; i < 9; i++){
         
         //random number generator
         NSNumber *number = [NSNumber numberWithInt:rand()%60 + 20];
@@ -29,6 +29,10 @@
         [dataArray addObject:number];
     }
     //call DLPieChart method
+    
+    UILabel *lols = [[UILabel alloc] initWithFrame:CGRectMake(10, 200, 200, 40)];
+    [lols setText:@"HEHEHEHEHEHHEHEHE"];
+    [self.pieChartView addSubview:lols];
     [self.pieChartView renderInLayer:self.pieChartView dataArray:dataArray]; 
 
 
