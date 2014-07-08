@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A58505EB196C8FB90016C49F /* EMJSlidersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58505EA196C8FB90016C49F /* EMJSlidersViewController.m */; };
 		F972829C196C506500D89420 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F972829B196C506500D89420 /* Foundation.framework */; };
 		F972829E196C506500D89420 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F972829D196C506500D89420 /* CoreGraphics.framework */; };
 		F97282A0196C506500D89420 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F972829F196C506500D89420 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A58505E9196C8FB90016C49F /* EMJSlidersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMJSlidersViewController.h; path = ../EMJSlidersViewController.h; sourceTree = "<group>"; };
+		A58505EA196C8FB90016C49F /* EMJSlidersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMJSlidersViewController.m; path = ../EMJSlidersViewController.m; sourceTree = "<group>"; };
 		F9728298196C506500D89420 /* Grade_Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grade_Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F972829B196C506500D89420 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F972829D196C506500D89420 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +140,8 @@
 		F97282A1196C506500D89420 /* Grade_Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				A58505E9196C8FB90016C49F /* EMJSlidersViewController.h */,
+				A58505EA196C8FB90016C49F /* EMJSlidersViewController.m */,
 				F97282AA196C506500D89420 /* BNRAppDelegate.h */,
 				F97282AB196C506500D89420 /* BNRAppDelegate.m */,
 				F97282AD196C506500D89420 /* Images.xcassets */,
@@ -289,6 +294,7 @@
 				F97282AC196C506500D89420 /* BNRAppDelegate.m in Sources */,
 				F99085AE196C6B4A00A4CD05 /* ClassItemStore.m in Sources */,
 				F97282D1196C5E9200D89420 /* ClassItem.m in Sources */,
+				A58505EB196C8FB90016C49F /* EMJSlidersViewController.m in Sources */,
 				F97282D4196C695E00D89420 /* ClassTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
