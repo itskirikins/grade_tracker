@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F423E28C-DF5D-4212-A56A-A3C200D3C114</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Grade_Tracker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B9DB6E99-E713-45D3-A66C-4EB03709F2B4</key>
+		<string>https://github.com/eji27/grade_tracker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Grade_Tracker/Grade_Tracker.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B9DB6E99-E713-45D3-A66C-4EB03709F2B4</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/eji27/grade_tracker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B9DB6E99-E713-45D3-A66C-4EB03709F2B4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B9DB6E99-E713-45D3-A66C-4EB03709F2B4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>grade_tracker</string>
+		</dict>
+	</array>
+</dict>
+</plist>
