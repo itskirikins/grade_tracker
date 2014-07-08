@@ -1,1 +1,4 @@
-hello
+
+Understanding how to use git!
+
+
