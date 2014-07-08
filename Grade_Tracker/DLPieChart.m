@@ -682,20 +682,21 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
     self.DLDataArray = dataArray;
     self.DLPieChartView = layerHostingView;
     
-//    for(int i=0;i<self.DLDataArray.count;i++)
-//    {
-//        [self.DLColorsArray addObject:[UIColor colorWithRed:(rand()%255)/255.0 green:(rand()%255)/255.0 blue:(rand()%255)/255.0 alpha:1.0]];
-//    }
+#pragma mark colors
+    
+    [self.DLColorsArray addObject:[UIColor colorWithRed:0.714 green:0.969 blue:0.71 alpha:1]]; /*#b6f7b5*/
+    [self.DLColorsArray addObject:[UIColor colorWithRed:0.965 green:0.71 blue:0.969 alpha:1]]; /*#f6b5f7*/
+    [self.DLColorsArray addObject:[UIColor colorWithRed:0.71 green:0.969 blue:0.953 alpha:1]]; /*#b5f7f3*/
+    [self.DLColorsArray addObject:[UIColor colorWithRed:0.494 green:0.333 blue:0.98 alpha:1]]; /*#7e55fa*/
+    [self.DLColorsArray addObject:[UIColor colorWithRed:0.608 green:0.812 blue:0.569 alpha:1]]; /*#9bcf91*/
+    [self.DLColorsArray addObject:[UIColor colorWithRed:0.961 green:0.969 blue:0.71 alpha:1]]; /*#f5f7b5*/
+    [self.DLColorsArray addObject:[UIColor colorWithRed:0.494 green:0.333 blue:0.98 alpha:1]]; /*#7e55fa*/
+    [self.DLColorsArray addObject:[UIColor colorWithRed:0.718 green:0.71 blue:0.969 alpha:1]]; /*#b7b5f7*/
+    [self.DLColorsArray addObject:[UIColor colorWithRed:0.969 green:0.71 blue:0.71 alpha:1]]; /*#f7b5b5*/
+    [self.DLColorsArray addObject:[UIColor colorWithRed:0.529 green:0.459 blue:0.427 alpha:1]]; /*#87756d*/
+    [self.DLColorsArray addObject:[UIColor colorWithRed:1 green:1 blue:0.561 alpha:1]]; /*#ffff8f*/
+    [self.DLColorsArray addObject:[UIColor colorWithRed:0.494 green:0.333 blue:0.98 alpha:1]]; /*#7e55fa*/
 
-    [self.DLColorsArray addObject:[UIColor redColor]];
-    [self.DLColorsArray addObject:[UIColor blueColor]];
-    [self.DLColorsArray addObject:[UIColor cyanColor]];
-    [self.DLColorsArray addObject:[UIColor yellowColor]];
-    [self.DLColorsArray addObject:[UIColor purpleColor]];
-    [self.DLColorsArray addObject:[UIColor orangeColor]];
-    [self.DLColorsArray addObject:[UIColor greenColor]];
-    [self.DLColorsArray addObject:[UIColor brownColor]];
-    [self.DLColorsArray addObject:[UIColor magentaColor]];
     
     [layerHostingView setDataSource:self];
     [layerHostingView setDelegate:self];
@@ -799,9 +800,53 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
     return [self.DLColorsArray objectAtIndex:(index % self.DLColorsArray.count)];
 }
 
-#pragma mark - DLPieChart Delegate
+#pragma mark - DLPieChart Delegate (Touched something)
 - (void)pieChart:(DLPieChart *)pieChart didSelectSliceAtIndex:(NSUInteger)index
 {
     NSLog(@"did select slice at index %d",index);
+    NSLog(@"What is the label at this index %@", [self.DLDataArray objectAtIndex:index]);
+    
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Change percentage?"
+//                                                        message:@""
+//                                                       delegate:self
+//                                              cancelButtonTitle:@"No"
+//                                              otherButtonTitles:@"Yes", nil] ;
+//    [alertView show];
+//    
+//    
+//    
+//    
+//    
 }
+
+////Button clicked
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+//{
+//    //Use current location
+//    if (buttonIndex != alertView.cancelButtonIndex){
+//        UIAlertView *enterPercent = [[UIAlertView alloc] initWithTitle:@"Enter new percentage:"
+//                                                               message:@"  "
+//                                                              delegate:self
+//                                                     cancelButtonTitle:nil
+//                                                     otherButtonTitles:@"Ok", nil];
+//        enterPercent.alertViewStyle = UIAlertViewStylePlainTextInput;
+//        [enterPercent show];
+//    }
+//}
+//
+//- (void)enterPercent:(UIAlertView *)enterPercent clickedButtonAtIndex:(NSInteger)buttonIndex
+//{
+//    NSLog(@"Do stuff now");
+//    //Use current location
+////    if (buttonIndex != alertView.cancelButtonIndex){
+////        UIAlertView *enterAddress = [[UIAlertView alloc] initWithTitle:@"Enter new percentage:"
+////                                                               message:@"  "
+////                                                              delegate:self
+////                                                     cancelButtonTitle:nil
+////                                                     otherButtonTitles:@"Ok", nil];
+////        enterAddress.alertViewStyle = UIAlertViewStylePlainTextInput;
+////        [enterAddress show];
+////    }
+//}
+
 @end

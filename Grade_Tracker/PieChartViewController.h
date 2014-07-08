@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "DLPieChart.h"
 
-@interface ViewController : UIViewController
-@property (nonatomic, retain) IBOutlet DLPieChart *pieChartView; 
+@interface PieChartViewController : UIViewController
+@property (nonatomic, retain) IBOutlet DLPieChart *pieChartView;
+@property(nonatomic) NSDictionary *piAllButtons;
+
 @end

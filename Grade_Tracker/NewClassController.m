@@ -7,6 +7,7 @@
 //
 
 #import "NewClassController.h"
+#import "PieChartViewController.h"
 
 @implementation NewClassController
 @synthesize checkBoxButton1;
@@ -170,6 +171,28 @@
         [checkBoxButton10 setImage:[UIImage imageNamed:@"empty-check-box-hi.png"]
                          forState:UIControlStateNormal];
         checked10 = NO;
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"NewClass"]) {
+        NSDictionary *allButtons = @{
+                                     @"Homework" : [NSNumber numberWithBool:checked1],
+                                     @"Quizzes" : [NSNumber numberWithBool:checked2],
+                                     @"Tests" : [NSNumber numberWithBool:checked3],
+                                     @"Participation" : [NSNumber numberWithBool:checked4],
+                                     @"Projects" : [NSNumber numberWithBool:checked5],
+                                     @"Tests" : [NSNumber numberWithBool:checked6],
+                                     @"Midterm 1" : [NSNumber numberWithBool:checked7],
+                                     @"Midterm 2" : [NSNumber numberWithBool:checked8],
+                                     @"Midterm 3" : [NSNumber numberWithBool:checked9],
+                                     @"Final" : [NSNumber numberWithBool:checked10],
+                                     };
+        
+        PieChartViewController *pvc = segue.destinationViewController;
+        pvc.piAllButtons = allButtons;
     }
 }
 @end

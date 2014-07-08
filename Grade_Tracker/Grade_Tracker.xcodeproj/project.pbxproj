@@ -25,7 +25,7 @@
 		F97282D4196C695E00D89420 /* ClassTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97282D3196C695E00D89420 /* ClassTableViewController.m */; };
 		F99085AE196C6B4A00A4CD05 /* ClassItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F99085AD196C6B4A00A4CD05 /* ClassItemStore.m */; };
 		F9F65E1C196C8D9100D5722F /* DLPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F65E1B196C8D9100D5722F /* DLPieChart.m */; };
-		F9F65E1F196C8DA500D5722F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F65E1E196C8DA500D5722F /* ViewController.m */; };
+		F9F65E1F196C8DA500D5722F /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F65E1E196C8DA500D5722F /* PieChartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +66,8 @@
 		F99085AD196C6B4A00A4CD05 /* ClassItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassItemStore.m; sourceTree = "<group>"; };
 		F9F65E1A196C8D9100D5722F /* DLPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLPieChart.h; sourceTree = "<group>"; };
 		F9F65E1B196C8D9100D5722F /* DLPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLPieChart.m; sourceTree = "<group>"; };
-		F9F65E1D196C8DA500D5722F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F9F65E1E196C8DA500D5722F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F9F65E1D196C8DA500D5722F /* PieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartViewController.h; sourceTree = "<group>"; };
+		F9F65E1E196C8DA500D5722F /* PieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,15 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1329EA39196C8ECD009481AB /* NewClass */ = {
+			isa = PBXGroup;
+			children = (
+				F97282D3196C695E00D89420 /* ClassTableViewController.m */,
+				F97282D2196C695E00D89420 /* ClassTableViewController.h */,
+				F97282CC196C5B3700D89420 /* NewClassController.h */,
+				F97282CD196C5B3700D89420 /* NewClassController.m */,
+			);
+			name = NewClass;
+			sourceTree = "<group>";
+		};
 		F972828F196C506500D89420 = {
 			isa = PBXGroup;
 			children = (
 				F9F65E19196C8D8300D5722F /* PC */,
 				F97282CA196C507200D89420 /* Storyboard.storyboard */,
-				F97282CC196C5B3700D89420 /* NewClassController.h */,
-				F97282CD196C5B3700D89420 /* NewClassController.m */,
-				F97282D2196C695E00D89420 /* ClassTableViewController.h */,
-				F97282D3196C695E00D89420 /* ClassTableViewController.m */,
+				1329EA39196C8ECD009481AB /* NewClass */,
 				F99085AC196C6B4A00A4CD05 /* ClassItemStore.h */,
 				F99085AD196C6B4A00A4CD05 /* ClassItemStore.m */,
 				F97282CF196C5E9200D89420 /* ClassItem.h */,
@@ -179,8 +187,8 @@
 			children = (
 				F9F65E1A196C8D9100D5722F /* DLPieChart.h */,
 				F9F65E1B196C8D9100D5722F /* DLPieChart.m */,
-				F9F65E1D196C8DA500D5722F /* ViewController.h */,
-				F9F65E1E196C8DA500D5722F /* ViewController.m */,
+				F9F65E1D196C8DA500D5722F /* PieChartViewController.h */,
+				F9F65E1E196C8DA500D5722F /* PieChartViewController.m */,
 			);
 			name = PC;
 			sourceTree = "<group>";
@@ -284,7 +292,7 @@
 			files = (
 				F9F65E1C196C8D9100D5722F /* DLPieChart.m in Sources */,
 				F97282CE196C5B3700D89420 /* NewClassController.m in Sources */,
-				F9F65E1F196C8DA500D5722F /* ViewController.m in Sources */,
+				F9F65E1F196C8DA500D5722F /* PieChartViewController.m in Sources */,
 				F97282A8196C506500D89420 /* main.m in Sources */,
 				F97282AC196C506500D89420 /* BNRAppDelegate.m in Sources */,
 				F99085AE196C6B4A00A4CD05 /* ClassItemStore.m in Sources */,
