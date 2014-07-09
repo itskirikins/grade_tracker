@@ -50,7 +50,7 @@
 {
     if ([segue.identifier isEqualToString:@"DamnedDoneSegue"]) {
         ClassTableViewController *classTableViewController = segue.destinationViewController;
-        [classTableViewController addNewClass];
+        //[classTableViewController addNewClass];
     }
 }
 

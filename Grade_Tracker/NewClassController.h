@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class ClassItem;
 
 @interface NewClassController : UIViewController
 {
@@ -22,7 +23,10 @@
     BOOL checked10;
 }
 
+@property (nonatomic, strong) ClassItem *classItem;
+
 //Buttons
+@property (weak, nonatomic) IBOutlet UITextField *className;
 @property (weak, nonatomic) IBOutlet UIButton *checkBoxButton1;
 @property (weak, nonatomic) IBOutlet UIButton *checkBoxButton2;
 @property (weak, nonatomic) IBOutlet UIButton *checkBoxButton3;

@@ -9,6 +9,7 @@
 #import "ClassTableViewController.h"
 #import "ClassItem.h"
 #import "ClassItemStore.h"
+#import "NewClassController.h"
 
 @implementation ClassTableViewController
 
@@ -42,7 +43,7 @@
 - (void)addNewClass
 {
 
-    ClassItem *class = [[ClassItemStore sharedStore] createClass];
+    ClassItem *class = [[ClassItemStore sharedStore] createClass:nil];
     NSLog(@"%d in store right now", [[[ClassItemStore sharedStore] allClasses] count]);
     NSInteger lastRow = [[[ClassItemStore sharedStore] allClasses] indexOfObject:class];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
@@ -68,9 +69,17 @@
     [[ClassItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
 }
 
+
 - (IBAction)dismiss:(UIStoryboardSegue *)segue
 {
     NSLog(@"Done creating new item");
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 

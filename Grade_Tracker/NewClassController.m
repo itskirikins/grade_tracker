@@ -9,6 +9,8 @@
 #import "NewClassController.h"
 #import "PieChartViewController.h"
 #import "ClassTableViewController.h"
+#import "ClassItem.h"
+#import "ClassItemStore.h"
 
 @implementation NewClassController
 @synthesize checkBoxButton1;
@@ -189,6 +191,7 @@
         
         PieChartViewController *pvc = segue.destinationViewController;
         pvc.piAllButtons = allButtons;
+
     }
 }
 
@@ -196,5 +199,15 @@
 {
     [self.presentingViewController dismissViewControllerAnimated:YES
                                                       completion:NULL];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.view endEditing:YES];
+    
+    ClassItem *newClass = self.classItem;
+    newClass = [[ClassItemStore sharedStore] createClass: _className.text];
+    
 }
 @end

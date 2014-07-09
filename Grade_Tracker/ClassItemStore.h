@@ -14,7 +14,7 @@
 
 @property (nonatomic, readonly, copy) NSArray *allClasses;
 + (instancetype)sharedStore;
-- (ClassItem *) createClass;
+- (ClassItem *) createClass:(NSString *)className;
 - (void)removeClass:(ClassItem *)class;
 - (void)moveItemAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
 
