@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+@class CategoryItem;
 
 @interface ClassItem : NSObject <NSCoding>
 
 @property NSString *className;
 @property double classGrade;
 @property NSMutableArray *categories;
+
+- (void)addCategory:(CategoryItem *)category;
 
 
 @end

@@ -24,15 +24,9 @@
 - (ClassItem *)createClass:(NSString *)className
 {
     ClassItem *class = [[ClassItem alloc] init];
-//    NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-//    
-//    NSMutableString *randomString = [NSMutableString stringWithCapacity: 5];
-//    
-//    for (int i=0; i<5; i++) {
-//        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length]) % [letters length]]];
-//    }
-//    class.className = randomString;
-//    class.classGrade = arc4random();
+    
+    
+    
     class.className = className;
     [self.privateClasses addObject:class];
     return class;

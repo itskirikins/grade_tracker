@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ClassItem.h"
 @interface ClassDetailViewController : UITableViewController
+
+@property ClassItem *classItem;
 
 @end

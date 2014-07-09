@@ -11,6 +11,7 @@
 #import "ClassItemStore.h"
 #import "NewClassController.h"
 #import "ClassDetailViewController.h"
+#import "CategoryItem.h"
 
 @implementation ClassTableViewController
 
@@ -45,7 +46,6 @@
 {
 
     ClassItem *class = [[ClassItemStore sharedStore] createClass:nil];
-    NSLog(@"%d in store right now", [[[ClassItemStore sharedStore] allClasses] count]);
     NSInteger lastRow = [[[ClassItemStore sharedStore] allClasses] indexOfObject:class];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
     [self.tableView beginUpdates];
@@ -59,7 +59,6 @@
         NSArray *classes = [[ClassItemStore sharedStore] allClasses];
         ClassItem *class = classes[indexPath.row];
         [[ClassItemStore sharedStore] removeClass:class];
-        NSLog(@"After deleting, %d items in store", [[[ClassItemStore sharedStore] allClasses] count]);
         
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
@@ -73,7 +72,6 @@
 
 - (IBAction)dismiss:(UIStoryboardSegue *)segue
 {
-    NSLog(@"Done creating new item");
 
 }
 
@@ -86,6 +84,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ClassDetailViewController *dvc = [[ClassDetailViewController alloc] init];
+    dvc.classItem = [[[ClassItemStore sharedStore] allClasses] objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:dvc animated:YES];
 }
 

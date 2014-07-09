@@ -11,6 +11,7 @@
 #import "ClassTableViewController.h"
 #import "ClassItem.h"
 #import "ClassItemStore.h"
+#import "CategoryItem.h"
 
 @implementation NewClassController
 @synthesize checkBoxButton1;
@@ -192,6 +193,16 @@
         PieChartViewController *pvc = segue.destinationViewController;
         pvc.piAllButtons = allButtons;
 
+        ClassItem *newClass = self.classItem;
+        newClass = [[ClassItemStore sharedStore] createClass: _className.text];
+        NSMutableArray *userCategories = newClass.categories;
+        for (NSString *key in allButtons) {
+            if ([allButtons objectForKey:key] == [NSNumber numberWithBool:YES]) {
+                CategoryItem *newCategory = [[CategoryItem alloc] init];
+                newCategory.categoryName = key;
+                [userCategories addObject:newCategory];
+            }
+        }
     }
 }
 
@@ -205,9 +216,6 @@
 {
     [super viewWillDisappear:animated];
     [self.view endEditing:YES];
-    
-    ClassItem *newClass = self.classItem;
-    newClass = [[ClassItemStore sharedStore] createClass: _className.text];
-    
+
 }
 @end

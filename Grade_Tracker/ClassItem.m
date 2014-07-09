@@ -25,5 +25,20 @@
     return self;
 }
 
+- (void)addCategory:(CategoryItem *)category
+{
+    [_categories addObject:category];
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _categories = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+
 
 @end
