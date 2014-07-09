@@ -20,9 +20,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Classes" id="TZb-hz-dcD">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="6n2-Gq-0qv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f2C-B4-BOe">
+                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleEditingMode:" destination="0C6-N4-9ib" eventType="touchUpInside" id="RNa-N4-oXc"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GHw-FZ-VOy">
                             <connections>
-                                <segue destination="sO5-6w-EL1" kind="modal" id="E13-Ll-7Sj"/>
+                                <segue destination="sO5-6w-EL1" kind="modal" id="d3y-Me-gZG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -44,7 +56,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FF6-QF-9mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-404" y="-1574"/>
+            <point key="canvasLocation" x="-458" y="-1574"/>
         </scene>
         <!--New Class-->
         <scene sceneID="Eaz-Nr-kx0">
@@ -217,11 +229,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Class" id="S3r-pO-hoE">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="uiM-WY-rrA"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="BDO-Eb-SAU">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="uiM-WY-rrA">
+                            <connections>
+                                <action selector="dismiss:" destination="j1f-RQ-OlL" id="rsO-IP-n61"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="BDO-Eb-SAU">
                             <connections>
                                 <action selector="dismiss:" destination="j1f-RQ-OlL" id="PXv-Kt-Mfq"/>
-                                <segue destination="fwY-VO-N9d" kind="push" id="Gui-Wb-6t5"/>
+                                <segue destination="Kkz-PA-Ikh" kind="push" id="wpU-ey-UdM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -240,7 +256,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8m6-OQ-yMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="-1574"/>
+            <point key="canvasLocation" x="-78" y="-1574"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aus-3k-XvG">
+            <objects>
+                <viewController id="Kkz-PA-Ikh" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a8E-LR-3ZS"/>
+                        <viewControllerLayoutGuide type="bottom" id="8bc-zW-tAe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l4R-Tg-2fP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1O-BL-wFu" customClass="DLPieChart">
+                                <rect key="frame" x="8" y="162" width="305" height="244"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zBk-zb-bis">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="9dv-9Q-MM1">
+                            <connections>
+                                <segue destination="eaV-oS-Iop" kind="unwind" identifier="BackToTableSegue" unwindAction="dismiss:" id="Uth-Wq-vx0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pieChartView" destination="k1O-BL-wFu" id="7I6-32-Udo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51j-yC-ZP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eaV-oS-Iop" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="-1946"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yIe-g3-6wz">
@@ -256,35 +307,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iTw-MV-9by" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1349" y="-1058"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="pjy-Rp-mTZ">
-            <objects>
-                <viewController id="fwY-VO-N9d" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7qR-JA-FuJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Kq6-Z4-g2T"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kJa-6R-Ipn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cio-Bl-Vdk" customClass="DLPieChart">
-                                <rect key="frame" x="27" y="211" width="305" height="244"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="toM-Fn-6zf"/>
-                    <connections>
-                        <outlet property="pieChartView" destination="Cio-Bl-Vdk" id="UIJ-hF-dBO"/>
-                        <outlet property="view" destination="kJa-6R-Ipn" id="eAp-fH-2ks"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RPJ-vT-OnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-8" y="-818"/>
         </scene>
     </scenes>
     <resources>

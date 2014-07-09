@@ -38,11 +38,6 @@
     }
 }
 
-- (IBAction)dismiss:(id)sender
-{
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
-}
-
 - (IBAction)checkButtonAction1:(id)sender
 {
     if (!checked1){

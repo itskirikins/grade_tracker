@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "ClassTableViewController.h"
+#import "ClassItem.h"
+#import "ClassItemStore.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -42,6 +45,19 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)done:(id)sender {
+    [self performSegueWithIdentifier:@"BackToTableSegue"
+                              sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"BackToTableSegue"]) {
+        ClassTableViewController *tvc = [segue destinationViewController];
+        [tvc addNewClass];
+    }
 }
 
 @end
