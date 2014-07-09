@@ -33,11 +33,13 @@
     }
     
     //Create dataArray for pieChart
-    for (NSString *key in pivalues){
+    for (int i = 0; i < count; i++){
         
+        //random number generator
+        NSNumber *number = @(100 / count);
         
         //add number to array
-        [dataArray addObject:key];
+        [dataArray addObject:number];
     }
     
     //call DLPieChart method
