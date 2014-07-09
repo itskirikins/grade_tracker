@@ -8,6 +8,7 @@
 
 #import "BNRAppDelegate.h"
 #import "ClassTableViewController.h"
+#import "EMJSlidersViewController.h"
 
 @implementation BNRAppDelegate
 
