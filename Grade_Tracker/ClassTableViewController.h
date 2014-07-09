@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface ClassTableViewController : UITableViewController
-
+- (void)addNewClass;
 @end

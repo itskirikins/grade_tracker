@@ -23,14 +23,33 @@
 - (ClassItem *)createClass
 {
     ClassItem *class = [[ClassItem alloc] init];
-    class.className = @"Math";
-    class.classGrade = 90;
+    NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: 5];
+    
+    for (int i=0; i<5; i++) {
+        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length]) % [letters length]]];
+    }
+    class.className = randomString;
+    class.classGrade = arc4random();
     [self.privateClasses addObject:class];
     return class;
 }
 
+- (void)removeClass:(ClassItem *)class
+{
+    [self.privateClasses removeObjectIdenticalTo:class];
+}
 
-
+- (void)moveItemAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex
+{
+    if (fromIndex == toIndex) {
+        return;
+    }
+    ClassItem *class = self.privateClasses[fromIndex];
+    [self.privateClasses removeObjectAtIndex:fromIndex];
+    [self.privateClasses insertObject:class atIndex:toIndex];
+}
 
 
 //INIT
