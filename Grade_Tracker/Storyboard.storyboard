@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="EhG-1h-olF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="EhG-1h-olF">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <scenes>
-        <!--Class Table View Controller - Classes-->
+        <!--Classes-->
         <scene sceneID="537-ef-gce">
             <objects>
                 <tableViewController id="0C6-N4-9ib" customClass="ClassTableViewController" sceneMemberID="viewController">
@@ -58,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="-458" y="-1574"/>
         </scene>
-        <!--New Class Controller - New Class-->
+        <!--New Class-->
         <scene sceneID="Eaz-Nr-kx0">
             <objects>
                 <viewController id="j1f-RQ-OlL" customClass="NewClassController" sceneMemberID="viewController">
@@ -227,12 +227,11 @@
                     <navigationItem key="navigationItem" title="New Class" id="S3r-pO-hoE">
                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="uiM-WY-rrA">
                             <connections>
-                                <action selector="dismiss:" destination="j1f-RQ-OlL" id="rsO-IP-n61"/>
+                                <action selector="cancel:" destination="j1f-RQ-OlL" id="tbe-ry-Ie8"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="BDO-Eb-SAU">
                             <connections>
-                                <action selector="dismiss:" destination="j1f-RQ-OlL" id="PXv-Kt-Mfq"/>
                                 <segue destination="fwY-VO-N9d" kind="push" identifier="NewClass" id="Gui-Wb-6t5"/>
                             </connections>
                         </barButtonItem>
@@ -254,7 +253,7 @@
             </objects>
             <point key="canvasLocation" x="-78" y="-1574"/>
         </scene>
-        <!--Pie Chart View Controller - Syllabus Percentage Breakdown-->
+        <!--Syllabus Percentage Breakdown-->
         <scene sceneID="pjy-Rp-mTZ">
             <objects>
                 <viewController id="fwY-VO-N9d" customClass="PieChartViewController" sceneMemberID="viewController">
@@ -269,9 +268,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Syllabus Percentage Breakdown" id="toM-Fn-6zf"/>
+                    <navigationItem key="navigationItem" title="Syllabus Percentage Breakdown" id="toM-Fn-6zf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hZa-7d-0cR">
+                            <connections>
+                                <segue destination="eaV-oS-Iop" kind="unwind" identifier="DamnedDoneSegue" unwindAction="dismiss:" id="94w-uw-ywc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="pieChartView" destination="k1O-BL-wFu" id="7I6-32-Udo"/>
+                        <outlet property="pieChartView" destination="Cio-Bl-Vdk" id="XOh-Lj-aHr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51j-yC-ZP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -301,6 +306,9 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
 </document>

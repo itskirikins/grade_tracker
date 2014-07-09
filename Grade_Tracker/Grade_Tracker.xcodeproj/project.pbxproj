@@ -107,8 +107,8 @@
 		1329EA39196C8ECD009481AB /* NewClass */ = {
 			isa = PBXGroup;
 			children = (
-				F97282D3196C695E00D89420 /* ClassTableViewController.m */,
 				F97282D2196C695E00D89420 /* ClassTableViewController.h */,
+				F97282D3196C695E00D89420 /* ClassTableViewController.m */,
 				F97282CC196C5B3700D89420 /* NewClassController.h */,
 				F97282CD196C5B3700D89420 /* NewClassController.m */,
 			);

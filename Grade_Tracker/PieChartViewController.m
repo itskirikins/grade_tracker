@@ -7,7 +7,7 @@
 //
 
 #import "PieChartViewController.h"
-#import "NewClassController.h"
+#import "ClassTableViewController.h"
 
 @interface PieChartViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -45,12 +45,13 @@
     //call DLPieChart method
     [self.pieChartView renderInLayer:self.pieChartView dataArray:dataArray];
 }
-    
-//
-//- (void)didReceiveMemoryWarning
-//{
-//    [super didReceiveMemoryWarning];
-//    // Dispose of any resources that can be recreated.
-//}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"DamnedDoneSegue"]) {
+        ClassTableViewController *classTableViewController = segue.destinationViewController;
+        [classTableViewController addNewClass];
+    }
+}
 
 @end

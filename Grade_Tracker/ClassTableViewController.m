@@ -46,7 +46,9 @@
     NSLog(@"%d in store right now", [[[ClassItemStore sharedStore] allClasses] count]);
     NSInteger lastRow = [[[ClassItemStore sharedStore] allClasses] indexOfObject:class];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    [self.tableView beginUpdates];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView endUpdates];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,12 +67,6 @@
 {
     [[ClassItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
 }
-
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//    [self.tableView reloadData];
-//}
 
 - (IBAction)dismiss:(UIStoryboardSegue *)segue
 {

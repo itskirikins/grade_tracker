@@ -8,6 +8,7 @@
 
 #import "NewClassController.h"
 #import "PieChartViewController.h"
+#import "ClassTableViewController.h"
 
 @implementation NewClassController
 @synthesize checkBoxButton1;
@@ -189,5 +190,11 @@
         PieChartViewController *pvc = segue.destinationViewController;
         pvc.piAllButtons = allButtons;
     }
+}
+
+- (IBAction)cancel:(id)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES
+                                                      completion:NULL];
 }
 @end
