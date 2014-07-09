@@ -10,9 +10,9 @@
 
 @interface ClassItem : NSObject <NSCoding>
 
-@property NSMutableArray *checkedCategories;
-@property NSMutableDictionary *categories;
 @property NSString *className;
-@property int classGrade;
+@property double classGrade;
+@property NSMutableArray *categories;
+
 
 @end

@@ -19,6 +19,7 @@
 {
     self = [super init];
     if (self) {
+        _categories = [[NSMutableArray alloc] init];
         _categories = [aDecoder decodeObjectForKey:@"categories"];
     }
     return self;

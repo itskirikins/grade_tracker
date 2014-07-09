@@ -11,6 +11,9 @@
 		A58505F6196CA2E40016C49F /* EMJSlidersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58505F5196CA2E40016C49F /* EMJSlidersViewController.xib */; };
 		A58505FA196CA4100016C49F /* SliderTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A58505F8196CA4100016C49F /* SliderTableCell.m */; };
 		A58505FB196CA4100016C49F /* SliderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58505F9196CA4100016C49F /* SliderTableCell.xib */; };
+		F9251395196DAC6600327B1D /* ClassDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9251394196DAC6600327B1D /* ClassDetailViewController.m */; };
+		F9251398196DB34800327B1D /* CategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F9251397196DB34800327B1D /* CategoryItem.m */; };
+		F925139B196DB49A00327B1D /* AssignmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F925139A196DB49A00327B1D /* AssignmentItem.m */; };
 		F972829C196C506500D89420 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F972829B196C506500D89420 /* Foundation.framework */; };
 		F972829E196C506500D89420 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F972829D196C506500D89420 /* CoreGraphics.framework */; };
 		F97282A0196C506500D89420 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F972829F196C506500D89420 /* UIKit.framework */; };
@@ -49,6 +52,12 @@
 		A58505F7196CA4100016C49F /* SliderTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderTableCell.h; sourceTree = "<group>"; };
 		A58505F8196CA4100016C49F /* SliderTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderTableCell.m; sourceTree = "<group>"; };
 		A58505F9196CA4100016C49F /* SliderTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderTableCell.xib; sourceTree = "<group>"; };
+		F9251393196DAC6600327B1D /* ClassDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassDetailViewController.h; sourceTree = "<group>"; };
+		F9251394196DAC6600327B1D /* ClassDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDetailViewController.m; sourceTree = "<group>"; };
+		F9251396196DB34800327B1D /* CategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryItem.h; sourceTree = "<group>"; };
+		F9251397196DB34800327B1D /* CategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryItem.m; sourceTree = "<group>"; };
+		F9251399196DB49A00327B1D /* AssignmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentItem.h; sourceTree = "<group>"; };
+		F925139A196DB49A00327B1D /* AssignmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentItem.m; sourceTree = "<group>"; };
 		F9728298196C506500D89420 /* Grade_Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grade_Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F972829B196C506500D89420 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F972829D196C506500D89420 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,6 +120,8 @@
 				F97282D3196C695E00D89420 /* ClassTableViewController.m */,
 				F97282CC196C5B3700D89420 /* NewClassController.h */,
 				F97282CD196C5B3700D89420 /* NewClassController.m */,
+				F9251393196DAC6600327B1D /* ClassDetailViewController.h */,
+				F9251394196DAC6600327B1D /* ClassDetailViewController.m */,
 			);
 			name = NewClass;
 			sourceTree = "<group>";
@@ -125,6 +136,10 @@
 				F99085AD196C6B4A00A4CD05 /* ClassItemStore.m */,
 				F97282CF196C5E9200D89420 /* ClassItem.h */,
 				F97282D0196C5E9200D89420 /* ClassItem.m */,
+				F9251396196DB34800327B1D /* CategoryItem.h */,
+				F9251397196DB34800327B1D /* CategoryItem.m */,
+				F9251399196DB49A00327B1D /* AssignmentItem.h */,
+				F925139A196DB49A00327B1D /* AssignmentItem.m */,
 				F97282A1196C506500D89420 /* Grade_Tracker */,
 				F97282BA196C506500D89420 /* Grade_TrackerTests */,
 				F972829A196C506500D89420 /* Frameworks */,
@@ -310,13 +325,16 @@
 			files = (
 				F9F65E1C196C8D9100D5722F /* DLPieChart.m in Sources */,
 				F97282CE196C5B3700D89420 /* NewClassController.m in Sources */,
+				F9251398196DB34800327B1D /* CategoryItem.m in Sources */,
 				F9F65E1F196C8DA500D5722F /* PieChartViewController.m in Sources */,
 				F97282A8196C506500D89420 /* main.m in Sources */,
 				F97282AC196C506500D89420 /* BNRAppDelegate.m in Sources */,
 				A58505FA196CA4100016C49F /* SliderTableCell.m in Sources */,
 				F99085AE196C6B4A00A4CD05 /* ClassItemStore.m in Sources */,
+				F925139B196DB49A00327B1D /* AssignmentItem.m in Sources */,
 				F97282D1196C5E9200D89420 /* ClassItem.m in Sources */,
 				A58505EB196C8FB90016C49F /* EMJSlidersViewController.m in Sources */,
+				F9251395196DAC6600327B1D /* ClassDetailViewController.m in Sources */,
 				F97282D4196C695E00D89420 /* ClassTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

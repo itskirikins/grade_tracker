@@ -10,6 +10,7 @@
 #import "ClassItem.h"
 #import "ClassItemStore.h"
 #import "NewClassController.h"
+#import "ClassDetailViewController.h"
 
 @implementation ClassTableViewController
 
@@ -82,5 +83,10 @@
     [self.tableView reloadData];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ClassDetailViewController *dvc = [[ClassDetailViewController alloc] init];
+    [self.navigationController pushViewController:dvc animated:YES];
+}
 
 @end

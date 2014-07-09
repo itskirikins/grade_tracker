@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="EhG-1h-olF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="EhG-1h-olF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Classes-->
+        <!--Class Table View Controller - Classes-->
         <scene sceneID="537-ef-gce">
             <objects>
                 <tableViewController id="0C6-N4-9ib" customClass="ClassTableViewController" sceneMemberID="viewController">
@@ -13,10 +13,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IKf-yZ-Xcx">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="IKf-yZ-Xcx">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IKf-yZ-Xcx" id="sym-Xc-sVO">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ioS-uL-1cB">
@@ -58,7 +59,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g83-QA-Ksk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-897" y="-1068"/>
+            <point key="canvasLocation" x="-1705" y="-1444"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IRg-MX-ZPR">
@@ -73,9 +74,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FF6-QF-9mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="-1574"/>
+            <point key="canvasLocation" x="-1266" y="-1950"/>
         </scene>
-        <!--New Class-->
+        <!--New Class Controller - New Class-->
         <scene sceneID="Eaz-Nr-kx0">
             <objects>
                 <viewController id="j1f-RQ-OlL" customClass="NewClassController" sceneMemberID="viewController">
@@ -269,9 +270,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8m6-OQ-yMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78" y="-1574"/>
+            <point key="canvasLocation" x="-886" y="-1950"/>
         </scene>
-        <!--Syllabus Percentage Breakdown-->
+        <!--Pie Chart View Controller - Syllabus Percentage Breakdown-->
         <scene sceneID="pjy-Rp-mTZ">
             <objects>
                 <viewController id="fwY-VO-N9d" customClass="PieChartViewController" sceneMemberID="viewController">
@@ -300,7 +301,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51j-yC-ZP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eaV-oS-Iop" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="348" y="-1946"/>
+            <point key="canvasLocation" x="-460" y="-2322"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yIe-g3-6wz">
@@ -315,7 +316,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iTw-MV-9by" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1349" y="-1058"/>
+            <point key="canvasLocation" x="-2157" y="-1434"/>
         </scene>
     </scenes>
     <resources>
@@ -324,9 +325,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4">
-            <size key="portraitSize" width="320" height="568"/>
-            <size key="landscapeSize" width="568" height="320"/>
-        </simulatedScreenMetrics>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>
